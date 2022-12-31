@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+:root{
+    --blue: hsl(246, 80%, 60%);
+    --orange: hsl(15, 100%, 70%);
+    --soft-blue: hsl(195, 74%, 62%);
+    --soft-red: hsl(348, 100%, 68%);
+    --lime-green: hsl(145, 58%, 55%);
+    --violet: hsl(264, 64%, 52%);
+    --yellow: hsl(43, 84%, 65%);
+    --very-dark-blue: hsl(226, 43%, 10%);
+    --dark-blue: hsl(235, 46%, 20%);
+    --desaturated-blue: hsl(235, 34%, 55%);
+    --pale-blue: hsl(236, 100%, 87%);
+    --white: hsl(0, 0%, 100%);
+
+    --font-size: 18px;
+    --weight-300: 300;
+    --weight-400: 400;
+    --weight-500: 500;
+    --font-name: Rubik;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    font-family: var(--font-name);
+    font-size: var(--font-size);
+    background: var(--very-dark-blue);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.--container{
+    display: flex;
+    gap: 20px;
+}
+
+.--sidebar{
+    background: var(--dark-blue);
+    border-radius: 20px;
+}
+
+.--profile-bar{
+    background: var(--blue);
+    border-radius: 20px;
+    padding: 25px 30px;
+    height: 40vh;
+}
+
+.--profile-bar > img{
+    width: 5rem;
+    border: .2rem solid var(--white);
+    border-radius: 50%;
+}
+
+.--profile-texts{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.--profile-texts > *{
+    font-weight: var(--weight-300);
+}
+
+.--profile-texts > h1{
+    font-size: 40px;
+    width: 200px;
+}
+
+.--choice-box{
+    padding: 25px 30px;
+}
+
+.--choice-box >  ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.choice_str{
+    color: var(--desaturated-blue);
+    font-family: var(--font-name);
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: var(--font-size);
+    cursor: pointer;
+    transition: all ease-in-out .15s;
+}
+
+.choice_str:hover{
+    color: var(--white);
+}
+
+.active{
+    color: var(--white) !important;
+}
+
+i{
+    color: var(--pale-blue);
+    transition: all ease-in-out .15s;
+}
+
+i:hover{
+    color: white;
+}
+
+.--grid-box{
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, 300x);
+    gap: 30px;
+}
+
+.card{
+    border-radius: 20px;
+    position: relative;
+}
+
+.Work{
+    background: url('images/icon-work.svg'), var(--orange);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 3px;
+}
+
+.Play{
+    background: url('images/icon-play.svg'), var(--soft-blue);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 3px;
+}
+
+.Study{
+    background: url('images/icon-study.svg'), var(--soft-red);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 3px;
+}
+
+.Exercise{
+    background: url('images/icon-exercise.svg'), var(--lime-green);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 3px;
+}
+
+.Social{
+    background: url('images/icon-social.svg'), var(--violet);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 3px;
+}
+
+.Self-Care{
+    background: url('images/icon-self-care.svg'), var(--yellow);
+    background-repeat: no-repeat;
+    background-position-x: 85%;
+    background-position-y: 3px;
+}
+
+.--info-of-card{
+    position: absolute;
+    bottom: 0px;
+    background: var(--dark-blue);
+    width: 100%;
+    border-radius: 20px;
+    padding: 20px 20px 30px 20px;
+    height: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: all ease-in-out .15s;
+}
+
+.--header-of-card{
+    display: flex;
+    justify-content: space-between;
+}
+
+.--hours-of-card > h1{
+    font-size: 75px;
+    font-weight: var(--weight-300);
+}
+
+.--hours-of-card > p{
+    font-weight: var(--weight-400);
+    color: var(--pale-blue);
+    line-height: 35px;
+}
+
+.--info-of-card:hover{
+    background: var(--desaturated-blue);
+}
+
+.--info-of-card{
+    cursor: pointer;
+    transition: all ease-in-out .15s;
+}
